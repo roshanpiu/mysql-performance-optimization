@@ -1,0 +1,28 @@
+- Use EXPLAIN keyword to see the execution plan of the query
+- check index usage and check rows scanned
+
+- Use limit 1 clause when retrieving a unique row
+- Use limit order by to replace min and max
+
+- Try to Convert <> to = operator it increases the chances of index usage
+
+- Avoid select * it ignores the index and waste the network bandwidth
+
+- Split big DELETE, UPDATE, INSERT into multiple smaller queries
+- Use appropriate data types for columns (smaller columns are faster)
+
+- Mysql query cache is case and space sensitive. use same query case for repeat queries
+
+- Index columns in where clause and join clause (use best judgement)
+
+- Use union all of possible over union
+- Table order does not matter when inner join is used
+- If column used in order by clause are indexed they help with performance
+
+- Use limit and offset to implement pagination
+
+
+- There can be multiple ways to write a query to produce the same result set.
+- It is possible that one method works for one query where as another method works for another query
+
+- Always test your query with near real data and schema on your development server before deploying to prod
